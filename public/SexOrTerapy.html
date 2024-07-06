@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sexo ou Terapia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="output.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-custom-gradient">
+        <div class="flex items-center space-x-4 p-8">
+            <button type="button" onclick="document.getElementById('como-funciona').scrollIntoView({ behavior: 'smooth' });" class="p-4 text-white hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-[#A5193D] dark:hover:bg-purple-700 dark:focus:ring-purple-900">
+                Como funciona?
+            </button>
+            <button type="button" onclick="togglePopup()" class="flex justify-center items-center w-10 h-10 text-white hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm dark:bg-[#A5193D] dark:hover:bg-purple-700 dark:focus:ring-purple-900 relative">
+                <img src="regras.png" alt="Regras" class="w-6 h-6">
+            </button>
+        </div>
+        <nav>
+            <div class="flex flex-col items-center justify-center min-h-screen">
+                <div class="">
+                    <div class="">
+                        <h1 class="text-center text-[#ffffff] font-playwrite text-7xl">Sexo</h1>
+                        <h2 class="text-center text-white font-DancingScript text-3xl"> ou </h2>
+                        <img src="background.png" alt="background" class="w-3/4 mx-auto">
+                        <p class="text-center text-white text-xl font-Questrial">Conectando casais</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="como-funciona" class="bg-[#A5193D] p-8">
+        <div class="font-Questrial">
+            <h1 class="text-white text-4xl font-bold mb-4 flex items-center justify-center">Como funciona?</h1>
+            <p class="text-white text-lg mb-4">
+                O jogo "Sexo ou Terapia" é uma experiência íntima projetada para casais, que combina ações e conversas destinadas a fortalecer a conexão entre os parceiros.
+            </p>
+            <ul class="list-disc list-inside text-white text-lg">
+                <li>Jogue o dado e deixe a sorte decidir se o momento será de SEXO ou TERAPIA</li>
+                <li>Se a dado cair no SEXO, abra a carta de sexo e faça a ação.</li>
+                <li>Se o dado cair em TERAPIA abra a carta de terapia e descubra segredos, conhecendo um pouco mais o seu parceiro.</li>
+                <li>SEXO = Faz a ação</li>
+                <li>TERAPIA = Faça a pergunta ao seu parceiro(a)</li>
+                <li>O jogo acaba quando o casal estiver profundamente conectado</li>
+            </ul>
+        </div>
+        <section class="bg-[#1B2A36] p-8 mt-16 rounded-lg">
+            <div class="font-Questrial">
+                <h1 class="text-white text-4xl font-bold mb-8 flex items-center justify-center">Vamos Jogar?</h1>
+                <div class="flex items-center justify-center space-x-8">
+                    <div id="sexo-card" class="card flex flex-col items-center justify-center rounded-lg bg-[#841737] p-8 w-64 h-96 transform rotate-2">
+                        <p class="text-white text-2xl font-bold mb-4">Sexo</p>
+                        <div class="hidden-content text-center">
+                            <p class="text-white text-lg">Ação de sexo</p>
+                        </div>
+                    </div>
+                    <button id="rollDice" class="p-4 bg-purple-700 text-white rounded-full focus:outline-none">Jogar Dado</button>
+                    <div id="terapia-card" class="card flex flex-col items-center justify-center rounded-lg bg-[#396781] p-8 w-64 h-96 transform -rotate-2">
+                        <p class="text-white text-2xl font-bold mb-4">Terapia</p>
+                        <div class="hidden-content text-center">
+                            <p class="text-white text-lg">Pergunta de terapia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-1/2">
+            <h2 class="text-2xl font-bold mb-4">Regras do Jogo</h2>
+            <ul class="list-disc list-inside mb-4">
+                <li>Regra 1: Jogue o dado e deixe a sorte decidir.</li>
+                <li>Regra 2: Se cair em SEXO, faça a ação indicada.</li>
+                <li>Regra 3: Se cair em TERAPIA, responda a pergunta.</li>
+                <li>Regra 4: Respeite o parceiro e o momento.</li>
+                <li>Regra 5: Se, somente se, o parceiro se sentir incomodado com a ação executada, não o deixe desconfortável e pare.</li>
+                <li>Regra 6: Se caso a TERAPIA indicada gerar um conflito, faça uma ação indicada pelo seu parceiro.</li>
+                <li>Regra 7: Se o dado cair em TERAPIA e a pergunta já tiver sido feita, rode o dado novamente.</li>
+            </ul>
+            <button onclick="togglePopup()" class="bg-purple-700 text-white p-2 rounded-full">Fechar</button>
+        </div>
+    </div>
+
+    <script src="../src/app.js"></script>
+    
+</body>
+</html>

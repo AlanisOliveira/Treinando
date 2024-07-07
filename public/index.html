@@ -7,15 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link href="output.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-custom-gradient">
     <header class="bg-custom-gradient">
         <div class="flex items-center space-x-4 p-8">
             <button type="button" onclick="document.getElementById('como-funciona').scrollIntoView({ behavior: 'smooth' });" class="p-4 text-white hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-[#A5193D] dark:hover:bg-purple-700 dark:focus:ring-purple-900">
@@ -27,12 +23,12 @@
         </div>
         <nav>
             <div class="flex flex-col items-center justify-center min-h-screen">
-                <div class="">
-                    <div class="">
-                        <h1 class="text-center text-[#ffffff] font-playwrite text-7xl">Sexo</h1>
-                        <h2 class="text-center text-white font-DancingScript text-3xl"> ou </h2>
+                <div>
+                    <div>
+                        <h1 class="text-center text-[#ffffff] font-playwrite text-7xl md:text-5xl sm:text-4xl">Sexo</h1>
+                        <h2 class="text-center text-white font-DancingScript text-3xl md:text-2xl sm:text-xl"> ou </h2>
                         <img src="background.png" alt="background" class="w-3/4 mx-auto">
-                        <p class="text-center text-white text-xl font-Questrial">Conectando casais</p>
+                        <p class="text-center text-white text-xl font-Questrial md:text-lg sm:text-base">Conectando casais</p>
                     </div>
                 </div>
             </div>
@@ -56,7 +52,7 @@
         <section class="bg-[#1B2A36] p-8 mt-16 rounded-lg">
             <div class="font-Questrial">
                 <h1 class="text-white text-4xl font-bold mb-8 flex items-center justify-center">Vamos Jogar?</h1>
-                <div class="flex items-center justify-center space-x-8">
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
                     <div id="sexo-card" class="card flex flex-col items-center justify-center rounded-lg bg-[#841737] p-8 w-64 h-96 transform rotate-2">
                         <p class="text-white text-2xl font-bold mb-4">Sexo</p>
                         <div class="hidden-content text-center">
@@ -75,8 +71,8 @@
         </section>
     </main>
 
-    <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
-        <div class="bg-white p-8 rounded-lg shadow-lg w-1/2">
+    <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden p-4">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
             <h2 class="text-2xl font-bold mb-4">Regras do Jogo</h2>
             <ul class="list-disc list-inside mb-4">
                 <li>Regra 1: Jogue o dado e deixe a sorte decidir.</li>
@@ -91,7 +87,6 @@
         </div>
     </div>
 
-    <script src="/app.js"></script>
-    
+    <script src="app.js"></script>
 </body>
 </html>
